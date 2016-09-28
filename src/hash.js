@@ -3,9 +3,13 @@
     @author Eshlee Romero | hello@esh.ph
 */
 
-function getHash(getParam) {
+function getHash(getParam, src) {
     var hash = window.location.hash,
         temp = {};
+
+    if (src) {
+        hash = src;
+    }
 
     hash = hash.replace('#', '');
     hash = hash.split('&');
